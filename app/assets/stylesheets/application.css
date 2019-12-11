@@ -45,11 +45,14 @@
 }
 
 footer{
-  height: 70px;
+  height: 40px;
   width: 100%;
   position: static;
   bottom:0;
   background-color: #5DBCD2;
   margin: auto;
+  text-align: center;
+  color: grey;
+
 
 }

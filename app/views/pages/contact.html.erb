@@ -11,7 +11,7 @@
       <%= telephone_field_tag :telephone, '', size: 45 %><br>
       <%= label_tag 'What would you like to ask us about?' %><br>
       <%= text_area_tag :message, '', size: "45x5" %><br>
-      <%= submit_tag 'Submit'%><br>
+      <%= submit_tag 'Submit', class: "btn btn-primary", width: "200px"%><br>
       <% end %>
       <% flash.each do |key, value| %>
       <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
