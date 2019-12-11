@@ -17,6 +17,7 @@ class PagesController < ApplicationController
       flash[:alert] = "Please enter a valid email!"
     else
   # Send an email
+  ContactMailer.contact_email(email, name, telephone, message).deliver_now
   flash[:notice] = "Thank you for your message! we will get in touch with you shortly!"
   end
   redirect_to contact_path
