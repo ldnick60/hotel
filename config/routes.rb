@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :rooms
   root 'pages#home'
 
   get 'home',  to:'pages#home'
