@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  room: one
+  date_in: 2019-12-11
+  date_out: 2019-12-11
+
+two:
+  user: two
+  room: two
+  date_in: 2019-12-11
+  date_out: 2019-12-11
