@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :user_infos
   resources :bookings
   resources :rooms
   root 'pages#home'
