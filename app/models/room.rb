@@ -1,5 +1,9 @@
 class Room < ApplicationRecord
   has_many :bookings
-  validates :type, presence: true
-  validates :type, uniqueness: true
+
+  validates :room_type, presence: true
+  validates :room_type, uniqueness: true
+  
+
+
 end

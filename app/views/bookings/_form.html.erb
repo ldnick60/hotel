@@ -1,16 +1,25 @@
-
+<%= render partial:"shared/nav"%>
+<div class="booking-form">
 <%= simple_form_for(@booking) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+    <h1>Create Booking</h1>
+
   <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.association :room %>
+    <div class="field form-group">
+      <%= f.text_field :id, value: current_user.email, readonly: true, class: 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :room_id%>
+      <%= f.collection_select :room_id, Room.all, :id, :room_type, class: 'form-control'%>
+    </div>
     <%= f.input :date_in %>
     <%= f.input :date_out %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'button btn-warning'%>
+  </div>
   </div>
 <% end %>

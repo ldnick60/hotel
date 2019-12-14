@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2019_12_12_021202) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string "type"
-    t.integer "number_total"
-    t.integer "number_avaliable"
+    t.string "room_type", null: false
+    t.integer "number_total", null: false
+    t.integer "number_avaliable", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
